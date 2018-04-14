@@ -1,0 +1,8 @@
+{
+  "name": "ndfacturacion",
+  "app_id": "b635813d",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
