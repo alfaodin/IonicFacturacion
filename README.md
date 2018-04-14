@@ -1,2 +1,2 @@
 # IonicFacturacion
-Proyecto de piloto
+Proyecto piloto
