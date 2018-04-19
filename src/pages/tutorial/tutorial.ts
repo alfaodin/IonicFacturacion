@@ -42,6 +42,11 @@ export class TutorialPage {
             image: 'assets/img/ica-slidebox-img-2.png',
           },
           {
+            title: 'Exportar facturas a Excel' ,
+            description: 'De forma sencilla descarga las facturas emitidas en formato excel',
+            image: 'assets/img/beneficios/dowload-to-excel.jpg',
+          },
+          {
             title: values.TUTORIAL_SLIDE3_TITLE,
             description: values.TUTORIAL_SLIDE3_DESCRIPTION,
             image: 'assets/img/ica-slidebox-img-3.png',

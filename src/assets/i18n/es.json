@@ -1,24 +1,27 @@
 {
+  "BACK_BUTTON_TEXT": "Regresar",
+
   "NAME": "Nombre",
   "PASSWORD": "Contraseña",
   "EMAIL": "Email",
   "LOGIN": "Iniciar sesión",
   "SIGNUP": "Registrarse",
 
-  "TAB1_TITLE": "Items",
-  "TAB2_TITLE": "Buscar",
-  "TAB3_TITLE": "Ajustes",
+  "TAB1_TITLE": "Home",
+  "TAB2_TITLE": "Facturar",
+  "TAB3_TITLE": "Clientes",
+  "TAB4_TITLE": "Lista Facturas",
 
   "MAP_TITLE": "Mapa",
 
-  "TUTORIAL_SLIDE1_TITLE": "Bienvenido/a al Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "El <b>Ionic Super Starter</b> es un starter de Ionic completo con muchas páginas preconstruidas y mejores prácticas.",
+  "TUTORIAL_SLIDE1_TITLE": "Bienvenido/a a NDOCS",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>NDocs</b> es un sistema de facturación que sigue la normativa del SRI y contiene las mejores prácticas.",
 
-  "TUTORIAL_SLIDE2_TITLE": "Cómo usar el Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Monta los varios tipos de página que quieras y quita los que no. Hemos incluido muchas estructuras de página comunes en apps móviles, como páginas de inicio de sesión y registro, pestañas, y esta página de tutorial.",
+  "TUTORIAL_SLIDE2_TITLE": "NDOCS",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Sistema de facturacion inteligente, a la vanguardia en la tecnologia.",
 
   "TUTORIAL_SLIDE3_TITLE": "Empezando",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "¿Necesitas ayuda? Échale un vistazo al README del Super Starter para ver el tutorial completo.",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "¿Necesitas ayuda? Échale un vistazo a nuestro canal www.ndeveloper/ndocs.com.ec para ver el tutorial completo.",
 
   "SETTINGS_TITLE": "Ajustes",
   "SETTINGS_OPTION1": "Opción 1",
