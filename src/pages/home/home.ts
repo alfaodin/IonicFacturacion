@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
-import { Observable } from 'rxjs/observable';
-import { delay } from 'rxjs/operators';
 /**
  * Generated class for the HomePage page.
  *
