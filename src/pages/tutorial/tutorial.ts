@@ -5,7 +5,6 @@ import { TranslateService } from '@ngx-translate/core';
 
 export interface Slide {
   title: string;
-  description: string;
   image: string;
 }
 
@@ -33,23 +32,15 @@ export class TutorialPage {
         this.slides = [
           {
             title: values.TUTORIAL_SLIDE1_TITLE,
-            description: values.TUTORIAL_SLIDE1_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-1.png',
+            image: 'assets/img/welcome/screen1.png'
           },
           {
-            title: values.TUTORIAL_SLIDE2_TITLE,
-            description: values.TUTORIAL_SLIDE2_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-2.png',
+            title: values.TUTORIAL_SLIDE2_TITLE,            
+            image: 'assets/img/welcome/screen1.png'
           },
           {
-            title: 'Exportar facturas a Excel' ,
-            description: 'De forma sencilla descarga las facturas emitidas en formato excel',
-            image: 'assets/img/beneficios/dowload-to-excel.jpg',
-          },
-          {
-            title: values.TUTORIAL_SLIDE3_TITLE,
-            description: values.TUTORIAL_SLIDE3_DESCRIPTION,
-            image: 'assets/img/ica-slidebox-img-3.png',
+            title: 'Exportar facturas a Excel',            
+            image: 'assets/img/welcome/screen1.png'
           }
         ];
       });

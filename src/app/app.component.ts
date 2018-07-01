@@ -50,7 +50,7 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      setTimeout(() => { this.splashScreen.hide(); }, 3000);
     });
     this.initTranslate();
   }
@@ -58,23 +58,6 @@ export class MyApp {
   initTranslate() {
     // Set the default language for translation strings, and the current language.
     this.translate.setDefaultLang('es');
-    // const browserLang = this.translate.getBrowserLang();
-
-    // if (browserLang) {
-    //   if (browserLang === 'zh') {
-    //     const browserCultureLang = this.translate.getBrowserCultureLang();
-
-    //     if (browserCultureLang.match(/-CN|CHS|Hans/i)) {
-    //       this.translate.use('zh-cmn-Hans');
-    //     } else if (browserCultureLang.match(/-TW|CHT|Hant/i)) {
-    //       this.translate.use('zh-cmn-Hant');
-    //     }
-    //   } else {
-    //     this.translate.use(this.translate.getBrowserLang());
-    //   }
-    // } else {
-    //   this.translate.use('es'); // Set your language here
-    // }
 
     this.translate.get(['BACK_BUTTON_TEXT']).subscribe(values => {
       this.config.set('ios', 'backButtonText', values.BACK_BUTTON_TEXT);
