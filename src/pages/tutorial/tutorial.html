@@ -1,31 +1,31 @@
-<!-- <div class="info-container"> -->
 <ion-content no-bounce>
-  <ion-slides pager="true" dir="{{dir}}" (ionSlideWillChange)="onSlideChangeStart($event)">
+  <ion-slides pager="true" dir="{{dir}}">
     <ion-slide *ngFor="let slide of slides">
+      <!-- HEADER -->
       <ion-title padding>
         <ion-icon name="star"></ion-icon>Ndocs
       </ion-title>
-
+      <!-- SLIDE CONTENT -->
       <ion-content padding>
-        <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+        <h4 class="slide-title" [innerHTML]="slide.title"></h4>
         <img [src]="slide.image" class="slide-image" />
       </ion-content>
     </ion-slide>
   </ion-slides>
 </ion-content>
-<!-- </div> -->
 
+<!-- FOOTER BUTTONS -->
 <ion-footer no-shadow>
   <ion-toolbar position="bottom">
     <ion-row>
       <ion-col col-6>
-        <button ion-button color="secondary" clear large full>
-          Iniciar sesión
+        <button ion-button color="secondary" clear large full (click)="showLoginScreen()">
+            {{ 'LOGIN' | translate }}
         </button>
       </ion-col>
       <ion-col col-6>
-        <button class="btn-divider" ion-button full clear large>
-          Registrarme
+        <button class="btn-divider" ion-button full clear large (click)="showSignUpScreen()">
+            {{ 'SIGNUP' | translate }}
         </button>
       </ion-col>
     </ion-row>

@@ -1,33 +1,57 @@
 @import "ionic.theme.default";
+.scroll-content {
+    overflow: hidden;
+}
 
-  .info-container {
+.slide-zoom {
     height: 100%;
-  }
-
-  .slide-zoom{
-    height: 100%;
-
     .slide-image {
-      max-height: 40%;
-      max-width: 60%;
-      margin: 36px 0;
+        max-height: 40%;
+        max-width: 80%;
+        margin-top: 9rem;
     }
-  }
+}
 
-  .slide-title {
+.slide-title {
     margin-top: 2.8rem;
-  }
+    color: map-get($colors, secondary);
+}
 
-  
-
- .btn-divider::before{
+.btn-divider::before {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translate(-50%, -50%);
     width: 1px;
-    height:90%;
+    height: 90%;
     z-index: 100;
     content: '';
     background: map-get($colors, secondary);
- }
+}
+
+h4 {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    font-weight: 200;
+}
+
+.toolbar-title {
+    font-weight: 700;
+}
+
+ion-icon {
+    color: map-get($colors, primary);
+    margin-right: 1rem;
+}
+
+ion-title {
+    margin-top: 13%;
+    .toolbar-title {
+        font-size: 2.64rem;
+    }
+}
+
+.button-md{
+  font-weight: 400;
+}
