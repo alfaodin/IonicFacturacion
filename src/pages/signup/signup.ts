@@ -49,6 +49,13 @@ export class SignupPage {
           toast.present();
         }
       );
+    }else {
+      let toast = this.toastCtrl.create({
+        message:'rasdasdas',
+        duration: 5000,
+        position: 'top'
+      });
+      toast.present();
     }
   }
 
