@@ -1,2 +1,14 @@
 page-login {
+  .container {
+    .forgot-container {
+      text-align: right;
+      margin-top: 1.8rem;
+      .log-in-link {
+        font-weight: 200;
+        font-size: 1.3rem;
+        color: map-get($colors, light);
+        border-bottom: 1px solid map-get($colors, light);
+      }
+    }
+  }
 }

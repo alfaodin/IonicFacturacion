@@ -10,21 +10,30 @@
     <ion-item>
       <ion-label color="light" floating>{{ 'RUC' | translate }}</ion-label>
       <ion-input type="text" formControlName="ruc"></ion-input>
-      <ion-icon name="warning" item-right primary></ion-icon>
+      <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['ruc'].invalid && !newUserForm.controls['ruc'].untouched"></ion-icon>
     </ion-item>
 
     <ion-item>
       <ion-label color="light" floating>{{ 'EMAIL' | translate }}</ion-label>
-      <ion-input type="email" formControlName="email" name="email"></ion-input>
+      <ion-input type="email" formControlName="email"></ion-input>
+      <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['email'].invalid && !newUserForm.controls['email'].untouched"></ion-icon>
     </ion-item>
 
     <ion-item>
       <ion-label color="light" floating>{{ 'PASSWORD' | translate }}</ion-label>
-      <ion-input type="password" formControlName="password" name="password"></ion-input>
+      <ion-input type="password" formControlName="password"></ion-input>
+      <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['password'].invalid && !newUserForm.controls['password'].untouched"></ion-icon>
     </ion-item>
 
-    <div padding>
-      <button class="sign-up-btn" ion-button color="light" round full type="submit">{{ 'SIGNUP_BUTTON' | translate }}</button>
+    <div class="button-container">
+
+      <button class="sign-up-btn" ion-button color="light" round full type="submit">
+        Empezar
+      </button>
+
+      <a class="log-in-link" (click)="showLoginScreen()">
+          Ya tengo una cuenta
+      </a>
     </div>
   </form>
 </div>

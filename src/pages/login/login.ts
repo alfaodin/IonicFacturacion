@@ -4,6 +4,7 @@ import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
 import { User } from '../../providers/providers';
 import { MainPage } from '../pages';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @IonicPage()
 @Component({
@@ -11,30 +12,30 @@ import { MainPage } from '../pages';
   templateUrl: 'login.html'
 })
 export class LoginPage {
-  // The account fields for the login form.
-  // If you're using the username field with or without email, make
-  // sure to add it to the type
-  account: { email: string, password: string } = {
-    email: 'test@example.com',
-    password: 'test'
-  };
 
+  newUserForm: FormGroup;
   // Our translated text strings
   private loginErrorString: string;
 
   constructor(public navCtrl: NavController,
     public user: User,
+    private formBuilder: FormBuilder,
     public toastCtrl: ToastController,
     public translateService: TranslateService) {
 
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
       this.loginErrorString = value;
     })
+
+    this.newUserForm = this.formBuilder.group({
+      ruc: ['', Validators.required],
+      password: ['', Validators.required]
+    });
   }
 
   // Attempt to login in through our User service
   doLogin() {
-    this.user.login(this.account).subscribe((resp) => {
+    this.user.login(this.newUserForm.value).subscribe((resp) => {
       this.navCtrl.push(MainPage);
     }, (err) => {
       this.navCtrl.push(MainPage);

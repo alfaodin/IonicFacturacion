@@ -1,39 +1,34 @@
-<ion-header>
+<div class="header">
+  <ion-title padding>
+    <ion-icon name="star"></ion-icon>Ndocs
+  </ion-title>
+</div>
 
-  <ion-navbar>
-    <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title>
-  </ion-navbar>
+<div class="container">
+  <form [formGroup]="newUserForm" (submit)="doLogin()">
 
-</ion-header>
+    <ion-item>
+      <ion-label color="light" floating>{{ 'RUC' | translate }}</ion-label>
+      <ion-input type="text" formControlName="ruc"></ion-input>
+      <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['ruc'].invalid && !newUserForm.controls['ruc'].untouched"></ion-icon>
+    </ion-item>
 
+    <ion-item>
+      <ion-label color="light" floating>{{ 'PASSWORD' | translate }}</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+      <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['password'].invalid && !newUserForm.controls['password'].untouched"></ion-icon>
+    </ion-item>
 
-<ion-content>
-  <form (submit)="doLogin()">
-    <ion-list>
+    <div class="forgot-container">
+      <a class="log-in-link">
+        Olvidé mi contraseña
+      </a>
+    </div>
 
-      <ion-item>
-        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
-        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
-      </ion-item>
-
-      <!--
-      Want to use a Username instead of an Email? Here you go:
-
-      <ion-item>
-        <ion-label floating>{{ 'USERNAME' | translate }}</ion-label>
-        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
-      </ion-item>
-      -->
-
-      <ion-item>
-        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
-        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
-      </ion-item>
-
-      <div padding>
-        <button ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
-      </div>
-
-    </ion-list>
+    <div class="button-container">
+      <button class="sign-up-btn" ion-button color="light" round full type="submit">
+        {{ 'LOGIN_BUTTON' | translate }}
+      </button>
+    </div>
   </form>
-</ion-content>
+</div>

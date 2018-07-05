@@ -35,21 +35,30 @@ export class SignupPage {
   }
 
   doSignup() {
-    // Attempt to login in through our User service
-    this.user.signup(this.newUserForm.value).subscribe(
-      resp => {
-        this.navCtrl.push(MainPage);
-      },
-      err => {
-        this.navCtrl.push(MainPage);
+    if (this.newUserForm.valid) {
+      this.user.signup(this.newUserForm.value).subscribe(
+        resp => {
+          this.navCtrl.setRoot(MainPage);
+        },
+        err => {
+          let toast = this.toastCtrl.create({
+            message: this.signupErrorString,
+            duration: 3000,
+            position: 'top'
+          });
+          toast.present();
+        }
+      );
+    }
+  }
 
-        // Unable to sign up
-        let toast = this.toastCtrl.create({
-          message: this.signupErrorString,
-          duration: 3000,
-          position: 'top'
-        });
-        toast.present();
+  showLoginScreen() {
+    this.navCtrl.setRoot(
+      'LoginPage',
+      {},
+      {
+        animate: true,
+        direction: 'forward'
       }
     );
   }
