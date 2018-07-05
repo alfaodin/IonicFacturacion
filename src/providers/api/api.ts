@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
  */
 @Injectable()
 export class Api {
-  url: string = 'https://example.com/api/v1';
+  url: string = 'http://localhost:3000';
+  apiRest: string = 'api/ndocs';
 
-  constructor(public http: HttpClient) {
-  }
+  constructor(public http: HttpClient) {}
 
   get(endpoint: string, params?: any, reqOpts?: any) {
     if (!reqOpts) {
@@ -26,22 +26,34 @@ export class Api {
       }
     }
 
-    return this.http.get(this.url + '/' + endpoint, reqOpts);
+    return this.http.get(`${this.url}/${this.apiRest}/${endpoint}`, reqOpts);
   }
 
   post(endpoint: string, body: any, reqOpts?: any) {
-    return this.http.post(this.url + '/' + endpoint, body, reqOpts);
+    return this.http.post(
+      `${this.url}/${this.apiRest}/${endpoint}`,
+      body,
+      reqOpts
+    );
   }
 
   put(endpoint: string, body: any, reqOpts?: any) {
-    return this.http.put(this.url + '/' + endpoint, body, reqOpts);
+    return this.http.put(
+      `${this.url}/${this.apiRest}/${endpoint}`,
+      body,
+      reqOpts
+    );
   }
 
   delete(endpoint: string, reqOpts?: any) {
-    return this.http.delete(this.url + '/' + endpoint, reqOpts);
+    return this.http.delete(`${this.url}/${this.apiRest}/${endpoint}`, reqOpts);
   }
 
   patch(endpoint: string, body: any, reqOpts?: any) {
-    return this.http.patch(this.url + '/' + endpoint, body, reqOpts);
+    return this.http.patch(
+      `${this.url}/${this.apiRest}/${endpoint}`,
+      body,
+      reqOpts
+    );
   }
 }
