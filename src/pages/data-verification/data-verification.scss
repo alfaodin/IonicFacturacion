@@ -27,14 +27,17 @@ page-data-verification {
     .container {
         margin-top: 3rem;
         height: 90%;
-        .item-input .label-md{
+        .item-input .label-md {
             color: map-get($colors, dark);
         }
         .item-ios,
         .item-md {
+            padding: 0;
+            margin: 3rem 0; 
             background-color: transparent;
             color: map-get($colors, blueGrey);
         }
+        .item-select .label-md,
         .item-input-has-focus .label-md[floating],
         .input-has-focus .label-md[floating] {
             color: map-get($colors, dark);
@@ -43,7 +46,9 @@ page-data-verification {
             color: map-get($colors, dark);
         }
         .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
-        .item-md.item-input.item-input-has-focus .item-inner {
+        .item-md.item-input.item-input-has-focus .item-inner,
+        .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+        .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
             border-bottom-color: map-get($colors, blueGrey);
             box-shadow: unset;
         }

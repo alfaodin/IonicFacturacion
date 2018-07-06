@@ -51,6 +51,18 @@
       "email": "asd",
       "password": "asd",
       "id": 5
+    },
+    {
+      "ruc": "werwe",
+      "email": "werwe",
+      "password": "ewrwerwe",
+      "id": 6
+    },
+    {
+      "ruc": "fgdf",
+      "email": "fgdgd",
+      "password": "dfgdgd",
+      "id": 7
     }
   ]
 }

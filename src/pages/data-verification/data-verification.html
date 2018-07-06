@@ -19,27 +19,33 @@
       <ion-slide>
         <form [formGroup]="newUserForm" (submit)="doSignup()">
           <ion-item>
-            <ion-label color="light" floating>{{ 'RUC' | translate }}</ion-label>
-            <ion-input type="text" formControlName="ruc"></ion-input>
-            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['ruc'].invalid && !newUserForm.controls['ruc'].untouched"></ion-icon>
+            <ion-label color="light" floating>Razón Social</ion-label>
+            <ion-input type="text" formControlName="businessName"></ion-input>
+            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['businessName'].invalid && !newUserForm.controls['businessName'].untouched"></ion-icon>
           </ion-item>
 
           <ion-item>
-            <ion-label color="light" floating>{{ 'EMAIL' | translate }}</ion-label>
-            <ion-input type="email" formControlName="email"></ion-input>
-            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['email'].invalid && !newUserForm.controls['email'].untouched"></ion-icon>
+            <ion-label color="light" floating>Teléfono</ion-label>
+            <ion-input type="text" formControlName="cellphone"></ion-input>
+            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['cellphone'].invalid && !newUserForm.controls['cellphone'].untouched"></ion-icon>
           </ion-item>
 
           <ion-item>
-            <ion-label color="light" floating>{{ 'PASSWORD' | translate }}</ion-label>
-            <ion-input type="password" formControlName="password"></ion-input>
-            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['password'].invalid && !newUserForm.controls['password'].untouched"></ion-icon>
+            <ion-label color="light" floating>Dirección</ion-label>
+            <ion-input type="text" formControlName="direction"></ion-input>
+            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['direction'].invalid && !newUserForm.controls['direction'].untouched"></ion-icon>
           </ion-item>
 
           <ion-item>
-            <ion-label color="light" floating>{{ 'PASSWORD' | translate }}</ion-label>
-            <ion-input type="password" formControlName="password"></ion-input>
-            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['password'].invalid && !newUserForm.controls['password'].untouched"></ion-icon>
+            <ion-label floating>Sector de actividad económica</ion-label>
+            <ion-select formControlName="economicActivity">
+              <ion-option *ngFor="let val of values" [value]="val.value">
+                {{val.label}}
+              </ion-option>
+            </ion-select>
+            <!-- <ion-label color="light" floating>{{ 'PASSWORD' | translate }}</ion-label>
+            <ion-input type="text" formControlName="economicActivity"></ion-input>
+            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['economicActivity'].invalid && !newUserForm.controls['economicActivity'].untouched"></ion-icon> -->
           </ion-item>
 
           <div class="button-container">

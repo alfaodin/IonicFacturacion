@@ -12,16 +12,21 @@ export class DataVerificationPage {
   @ViewChild(Slides) slides: Slides;
 
   newUserForm: FormGroup;
+  values = [{value:0, label:'A'},{value:1, label: 'B'},{value:2, label:'A'},{value:4, label: 'B'}];
 
   constructor(
     public navCtrl: NavController, private formBuilder: FormBuilder) {
     this.newUserForm = this.formBuilder.group({
-      ruc: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', Validators.required]
+      businessName: ['', Validators.required],
+      cellphone: ['', Validators.required],
+      direction: ['', Validators.required],
+      economicActivity: ['', Validators.required]
     });
   }
 
+  ionViewDidLoad(){
+
+  }
 
   ionViewDidEnter(){
     this.slides.lockSwipes(true);
