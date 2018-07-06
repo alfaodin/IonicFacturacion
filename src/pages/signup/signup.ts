@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { IonicPage, NavController, ToastController } from 'ionic-angular';
+import {
+  IonicPage,
+  NavController,
+  ToastController,
+  LoadingController
+} from 'ionic-angular';
 
 import { User } from '../../providers/providers';
-import { MainPage } from '../pages';
+import { DataVerificationPage, LoginPage } from '../pages';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @IonicPage()
@@ -13,20 +18,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SignupPage {
   newUserForm: FormGroup;
-  // Our translated text strings
-  private signupErrorString: string;
 
   constructor(
     public user: User,
     public navCtrl: NavController,
     private formBuilder: FormBuilder,
     public toastCtrl: ToastController,
+    public loadingCtrl: LoadingController,
     public translateService: TranslateService
   ) {
-    this.translateService.get('SIGNUP_ERROR').subscribe(value => {
-      this.signupErrorString = value;
-    });
-
     this.newUserForm = this.formBuilder.group({
       ruc: ['', Validators.required],
       email: ['', Validators.required],
@@ -36,23 +36,40 @@ export class SignupPage {
 
   doSignup() {
     if (this.newUserForm.valid) {
+      let loading = this.loadingCtrl.create({
+        spinner: 'bubbles',
+        content: 'Please wait...'
+      });
+
+      loading.present();
       this.user.signup(this.newUserForm.value).subscribe(
         resp => {
-          this.navCtrl.setRoot(MainPage);
+          this.navCtrl.setRoot(
+            DataVerificationPage,
+            {},
+            {
+              animate: true,
+              direction: 'forward'
+            }
+          );
         },
         err => {
           let toast = this.toastCtrl.create({
-            message: this.signupErrorString,
+            message: err.text,
             duration: 3000,
             position: 'top',
-            cssClass: 'urgent-notification'
+            cssClass: 'notification error'
           });
           toast.present();
+        },
+        () => {
+          loading.dismiss();
+          console.log('onCompleted');
         }
       );
-    }else {
+    } else {
       let toast = this.toastCtrl.create({
-        message:'Los campos son requeridos',
+        message: 'Los campos son requeridos',
         duration: 5000,
         position: 'top',
         cssClass: 'notification error'
@@ -63,7 +80,7 @@ export class SignupPage {
 
   showLoginScreen() {
     this.navCtrl.setRoot(
-      'LoginPage',
+      LoginPage,
       {},
       {
         animate: true,

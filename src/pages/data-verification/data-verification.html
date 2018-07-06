@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Verifica datos de tu negocio</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- STEPS -->
+  <div class="step-container">
+    <label class="step selected">1</label>
+    <label class="step">2</label>
+    <label class="step">3</label>
+  </div>
+
+  <!-- SLIDES -->
+  <div class="container">
+    <ion-slides>
+      <!-- VERIFICACIÓN DE DATOS-->
+      <ion-slide>
+        <form [formGroup]="newUserForm" (submit)="doSignup()">
+          <ion-item>
+            <ion-label color="light" floating>{{ 'RUC' | translate }}</ion-label>
+            <ion-input type="text" formControlName="ruc"></ion-input>
+            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['ruc'].invalid && !newUserForm.controls['ruc'].untouched"></ion-icon>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="light" floating>{{ 'EMAIL' | translate }}</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['email'].invalid && !newUserForm.controls['email'].untouched"></ion-icon>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="light" floating>{{ 'PASSWORD' | translate }}</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['password'].invalid && !newUserForm.controls['password'].untouched"></ion-icon>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="light" floating>{{ 'PASSWORD' | translate }}</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['password'].invalid && !newUserForm.controls['password'].untouched"></ion-icon>
+          </ion-item>
+
+          <div class="button-container">
+            <button class="sign-up-btn" ion-button color="primary" round type="submit">
+              Siguiente
+            </button>
+          </div>
+        </form>
+      </ion-slide>
+      <!-- SELECCION DE IMAGEN -->
+      <ion-slide>
+        <h1>Slide 2</h1>
+      </ion-slide>
+      <!-- VERIFICACIÓN DE FIRMA ELECTRÓNICA -->
+      <ion-slide>
+        <h1>Slide 3</h1>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

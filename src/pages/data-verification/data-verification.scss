@@ -1,0 +1,59 @@
+page-data-verification {
+    ion-title {
+        margin-top: 0;
+        text-align: center;
+        .toolbar-title {
+            font-size: 1.9rem;
+            color: map-get($colors, dark);
+        }
+    }
+    .step-container {
+        margin: 1.5rem 2rem;
+        text-align: center;
+        .step {
+            font-size: 1.6rem;
+            color: map-get($colors, blueGrey);
+            margin-left: -.5rem;
+            padding: 14px 23px;
+            font-weight: 200;
+            border-bottom: 2px solid map-get($colors, blueGrey);
+            &.selected {
+                font-weight: 400;
+                color: map-get($colors, primary);
+                border-bottom-color: map-get($colors, primary);
+            }
+        }
+    }
+    .container {
+        margin-top: 3rem;
+        height: 90%;
+        .item-input .label-md{
+            color: map-get($colors, dark);
+        }
+        .item-ios,
+        .item-md {
+            background-color: transparent;
+            color: map-get($colors, blueGrey);
+        }
+        .item-input-has-focus .label-md[floating],
+        .input-has-focus .label-md[floating] {
+            color: map-get($colors, dark);
+        }
+        ion-icon {
+            color: map-get($colors, dark);
+        }
+        .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+        .item-md.item-input.item-input-has-focus .item-inner {
+            border-bottom-color: map-get($colors, blueGrey);
+            box-shadow: unset;
+        }
+        .button-container {
+            margin-top: 5rem;
+            .sign-up-btn {
+                padding: 2.4rem 5.3rem;
+                font-size: 1.6rem;
+                font-weight: 200;
+            }
+        }
+    }
+}

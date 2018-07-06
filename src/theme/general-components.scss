@@ -1,103 +1,98 @@
 page-signup,
-page-login {
-  text-align: center;
-  background-color: map-get($colors, primary) !important;
-  .header {
-    .toolbar-title {
-      font-weight: 700;
-      color: map-get($colors, light);
+page-login{
+    text-align: center;
+    background-color: map-get($colors, primary) !important;
+    .header {
+        .toolbar-title {
+            font-weight: 700;
+            color: map-get($colors, light);
+        }
+        ion-icon {
+            color: map-get($colors, light);
+            margin-right: 1rem;
+        }
+    }
+    .container {
+        margin: 3rem;
+        .item-ios,
+        .item-md {
+            background-color: transparent;
+            color: map-get($colors, light);
+        }
+        .item-input-has-focus .label-md[floating],
+        .input-has-focus .label-md[floating] {
+            color: map-get($colors, light);
+        }
+        .header-md::after {
+            background: none;
+        }
+        .button-container {
+            padding: 1rem;
+            margin-top: 3rem;
+            .sign-up-btn {
+                padding: 2.5rem;
+                font-size: 1.6rem;
+                font-weight: 600;
+                margin-bottom: 2rem;
+                color: map-get($colors, secondary);
+            }
+            .log-in-link {
+                font-weight: 200;
+                font-size: 1.3rem;
+                color: map-get($colors, light);
+                border-bottom: 1px solid map-get($colors, light);
+            }
+        }
+    }
+    ion-label,
+    ion-input {
+        font-weight: 200;
     }
     ion-icon {
-      color: map-get($colors, light);
-      margin-right: 1rem;
-    }
-  }
-  .container {
-    margin: 3rem;
-    .item-ios,
-    .item-md {
-      background-color: transparent;
-      color: map-get($colors, light);
-    }
-    .item-input-has-focus .label-md[floating],
-    .input-has-focus .label-md[floating] {
-      color: map-get($colors, light);
-    }
-    .header-md::after {
-      background: none;
-    }
-    .button-container {
-      padding: 1rem;
-      margin-top: 3rem;
-      .sign-up-btn {
-        padding: 2.5rem;
-        font-size: 1.6rem;
-        font-weight: 600;
-        margin-bottom: 2rem;
-        color: map-get($colors, secondary);
-      }
-      .log-in-link {
-        font-weight: 200;
-        font-size: 1.3rem;
         color: map-get($colors, light);
-        border-bottom: 1px solid map-get($colors, light);
-      }
     }
-  }
-  ion-label,
-  ion-input {
-    font-weight: 200;
-  }
-  ion-icon {
-    color: map-get($colors, light);
-  }
-  .item-md {
-    padding: 0;
-  }
-  .button-md {
-    box-shadow: none;
-  }
-  .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus)
-    .item-inner,
-  .item-md.item-input.item-input-has-focus .item-inner {
-    border-bottom-color: map-get($colors, light);
-    box-shadow: unset;
-  }
-  .icon-error-message {
-    margin: 0 !important;
-    font-size: 22px !important;
-    align-self: flex-end !important;
-  }
+    .item-md {
+        padding: 0;
+    }
+    .button-md {
+        box-shadow: none;
+    }
+    .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+    .item-md.item-input.item-input-has-focus .item-inner {
+        border-bottom-color: map-get($colors, light);
+        box-shadow: unset;
+    }
+    .icon-error-message {
+        margin: 0 !important;
+        font-size: 22px !important;
+        align-self: flex-end !important;
+    }
 }
 
 /*---------------------- TOAST -----------------------------*/
-
-.notification.error{
-
-  .toast-wrapper{
-    background-color: map-get($colors, danger);
-  }
-
-  .toast-message{
-    flex: none;
-    width: 90%;
-  }
-
-  .toast-message::after {
-    content: '\f267';
-    color: map-get($colors, light);
-    display: inline-block;
-    font-family: "Ionicons";
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
-    text-rendering: auto;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    font-size: 3rem;
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-  }
+.notification.error {
+    .toast-wrapper {
+        background-color: map-get($colors, danger);
+    }
+    .toast-message {
+        flex: none;
+        width: 90%;
+    }
+    .toast-message::after {
+        content: '\f267';
+        color: map-get($colors, light);
+        display: inline-block;
+        font-family: "Ionicons";
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+        text-rendering: auto;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        font-size: 3rem;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+    }
 }

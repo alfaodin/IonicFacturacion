@@ -27,6 +27,30 @@
       "ruc": 1,
       "email": "json",
       "password": "typicode"
+    },
+    {
+      "ruc": "1234567",
+      "email": "123",
+      "password": "qweqq",
+      "id": 2
+    },
+    {
+      "ruc": "asdas",
+      "email": "asdas",
+      "password": "asdasd",
+      "id": 3
+    },
+    {
+      "ruc": "ddd",
+      "email": "dd",
+      "password": "ddd",
+      "id": 4
+    },
+    {
+      "ruc": "asd",
+      "email": "asd",
+      "password": "asd",
+      "id": 5
     }
   ]
 }
