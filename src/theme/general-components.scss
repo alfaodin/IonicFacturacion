@@ -69,3 +69,35 @@ page-login {
     align-self: flex-end !important;
   }
 }
+
+/*---------------------- TOAST -----------------------------*/
+
+.notification.error{
+
+  .toast-wrapper{
+    background-color: map-get($colors, danger);
+  }
+
+  .toast-message{
+    flex: none;
+    width: 90%;
+  }
+
+  .toast-message::after {
+    content: '\f267';
+    color: map-get($colors, light);
+    display: inline-block;
+    font-family: "Ionicons";
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+  }
+}

@@ -44,16 +44,18 @@ export class SignupPage {
           let toast = this.toastCtrl.create({
             message: this.signupErrorString,
             duration: 3000,
-            position: 'top'
+            position: 'top',
+            cssClass: 'urgent-notification'
           });
           toast.present();
         }
       );
     }else {
       let toast = this.toastCtrl.create({
-        message:'rasdasdas',
+        message:'Los campos son requeridos',
         duration: 5000,
-        position: 'top'
+        position: 'top',
+        cssClass: 'notification error'
       });
       toast.present();
     }

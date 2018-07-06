@@ -1,14 +1,32 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 2, "title": "TEST", "author": "typicode" }
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "TEST",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
   ],
-  "profile": { "name": "typicode" },
+  "profile": {
+    "name": "typicode"
+  },
   "user": [
-    { "ruc": 1, "email": "json", "password": "typicode" },
-    { "ruc": 2, "email": "TEST", "password": "typicode" }
+    {
+      "id": 1,
+      "ruc": 1,
+      "email": "json",
+      "password": "typicode"
+    }
   ]
 }
