@@ -1,6 +1,8 @@
 import 'rxjs/add/operator/toPromise';
-
+import { tap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from "rxjs";
+
 
 import { Api } from '../api/api';
 
@@ -26,6 +28,10 @@ import { Api } from '../api/api';
 @Injectable()
 export class User {
   _user: any;
+  /**
+* Fuente de datos para loggedIn$
+*/
+  private loggedInSource = new BehaviorSubject<boolean>(false);
 
   constructor(public api: Api) { }
 
@@ -34,35 +40,47 @@ export class User {
    * the user entered on the form.
    */
   login(accountInfo: any) {
-    let seq = this.api.post('login', accountInfo).share();
-
-    seq.subscribe((res: any) => {
-      // If the API returned a successful response, mark the user as logged in
-      if (res.status == 'success') {
-        this._loggedIn(res);
-      } else {
-      }
-    }, err => {
-      console.error('ERROR', err);
-    });
-
-    return seq;
+    return this.api.post('login', accountInfo);
   }
+
+  /**
+  * Permite autenticarse al usuario
+  * @param {LoginParams} loginParams  Datos de autenticación
+  * @return {Observable}  Respuesta api
+  */
+  // login(loginParams: any) {
+  //   let url: string = environment.apiPath + environment.authentication.oauth.tokenEndpoint;
+  //   let authorizationDetail: object = {
+  //     grant_type: 'password',
+  //     response_type: 'token',
+  //     client_id: environment.authentication.oauth.clientId,
+  //     client_secret: environment.authentication.oauth.clientSecret
+  //   };
+  //   let request = environment.mocks ? this.api.get(url, Object.assign(loginParams, authorizationDetail)) : this.api.post(url, Object.assign(loginParams, authorizationDetail));
+  //   return request.pipe(
+  //     tap((token: any) => {
+  //       localStorage.setItem('token', JSON.stringify(token.response.authorization));
+  //       this.loggedInSource.next(true);
+  //     })
+  //   );
+  // }
 
   /**
    * Send a POST request to our signup endpoint with the data
    * the user entered on the form.
    */
   signup(accountInfo: any) {
-    let seq = this.api.post('user/signup', accountInfo);
-    return seq;
+    return this.api.post('user/signup', accountInfo);
   }
 
   /**
-   * Log the user out, which forgets the session
-   */
-  logout() {
-    this._user = null;
+    * Cierra la sesión del usuario
+    * @return {void}
+    */
+  logout(): void {
+    localStorage.removeItem('token');
+    this.loggedInSource.next(false);
+    // this.router.navigateByUrl('/login');
   }
 
   /**
