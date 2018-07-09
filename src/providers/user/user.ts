@@ -68,12 +68,16 @@ export class User {
    * Send a POST request to our signup endpoint with the data
    * the user entered on the form.
    */
-  signup(accountInfo: any) {
+  signup(accountInfo: any): Observable<any> {
     return this.api.post('user/signup', accountInfo);
   }
 
   getUserDataForRegistration(ruc): Observable<any> {
-    return this.api.post('user/registration-data', { ruc: ruc });
+    return this.api.get(`registration?ruc=${ruc}`);
+  }
+
+  saveUserDataForRegistration(userRegistration): Observable<any> {
+    return this.api.post(`registration`, userRegistration);
   }
 
   /**

@@ -3,5 +3,7 @@
   "/api/ndocs/user/signup": "/user/",
   "/api/ndocs/user/signup/:id": "/user/:id",
   "/api/ndocs/user/login": "/user",
-  "/api/ndocs/user/registration-data/:ruc": "/registration/:ruc"
+  "/api/ndocs/user/registration": "/registration/",
+  "/api/ndocs/user/registration\\?ruc=:ruc": "/registration/:ruc",
+  "/api/ndocs/settings/activity": "/activity"
 }

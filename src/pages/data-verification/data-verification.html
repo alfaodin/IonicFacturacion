@@ -18,7 +18,7 @@
     <ion-slides>
       <!-- VERIFICACIÓN DE DATOS-->
       <ion-slide>
-        <form [formGroup]="newUserForm" (submit)="doSignup()">
+        <form [formGroup]="newUserForm" (submit)="verifyData()">
           <ion-item>
             <ion-label color="light" floating>Razón Social</ion-label>
             <ion-input type="text" formControlName="businessName"></ion-input>
@@ -33,20 +33,17 @@
 
           <ion-item>
             <ion-label color="light" floating>Dirección</ion-label>
-            <ion-input type="text" formControlName="direction"></ion-input>
-            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['direction'].invalid && !newUserForm.controls['direction'].untouched"></ion-icon>
+            <ion-input type="text" formControlName="address"></ion-input>
+            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['address'].invalid && !newUserForm.controls['address'].untouched"></ion-icon>
           </ion-item>
 
           <ion-item>
             <ion-label floating>Sector de actividad económica</ion-label>
             <ion-select formControlName="economicActivity">
-              <ion-option *ngFor="let val of values" [value]="val.value">
+              <ion-option *ngFor="let val of economicActivities" [value]="val.id">
                 {{val.label}}
               </ion-option>
             </ion-select>
-            <!-- <ion-label color="light" floating>{{ 'PASSWORD' | translate }}</ion-label>
-            <ion-input type="text" formControlName="economicActivity"></ion-input>
-            <ion-icon class="icon-error-message" name="warning" item-right primary *ngIf="newUserForm.controls['economicActivity'].invalid && !newUserForm.controls['economicActivity'].untouched"></ion-icon> -->
           </ion-item>
 
           <div class="button-container">

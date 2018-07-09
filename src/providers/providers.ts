@@ -1,11 +1,6 @@
 import { Api } from './api/api';
-import { Items } from '../mocks/providers/items';
-import { Settings } from './settings/settings';
 import { User } from './user/user';
+import { Settings } from './settings/settings';
+import { AppSettingsProvider } from './app-settings/app-settings';
 
-export {
-    Api,
-    Items,
-    Settings,
-    User
-};
+export { Api, Settings, User, AppSettingsProvider };

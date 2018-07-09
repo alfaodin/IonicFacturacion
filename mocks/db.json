@@ -29,74 +29,96 @@
       "password": "typicode"
     },
     {
-      "ruc": "1234567",
-      "email": "123",
-      "password": "qweqq",
+      "ruc": "1712649951001",
+      "email": "sadas",
+      "password": "asdad",
       "id": 2
-    },
-    {
-      "ruc": "asdas",
-      "email": "asdas",
-      "password": "asdasd",
-      "id": 3
-    },
-    {
-      "ruc": "ddd",
-      "email": "dd",
-      "password": "ddd",
-      "id": 4
-    },
-    {
-      "ruc": "asd",
-      "email": "asd",
-      "password": "asd",
-      "id": 5
-    },
-    {
-      "ruc": "werwe",
-      "email": "werwe",
-      "password": "ewrwerwe",
-      "id": 6
-    },
-    {
-      "ruc": "fgdf",
-      "email": "fgdgd",
-      "password": "dfgdgd",
-      "id": 7
-    },
-    {
-      "ruc": "fghfg",
-      "email": "fghfg",
-      "password": "fghf",
-      "id": 8
     }
   ],
   "registration": [
     {
       "id": 1,
-      "ruc": "asdas",
+      "ruc": "1712649951001",
       "businessName": "test de razon social",
       "cellphone": "json",
       "address": "esta es la direccion de la persona",
-      "economicActivity": 1,
+      "economicActivity": 2,
       "oauth": {
-        "access_token":
-          "YTI0NjBhMjIxOGU5MmFiZmUxMjdmYTZlNWJkYjI0ZDkwODRjNTI4YWE5Y2FmMTdmZjEwN2E4MGRlNTkyNGFhNA",
+        "access_token": "YTI0NjBhMjIxOGU5MmFiZmUxMjdmYTZlNWJkYjI0ZDkwODRjNTI4YWE5Y2FmMTdmZjEwN2E4MGRlNTkyNGFhNA",
         "expires_in": 3600,
         "token_type": "Bearer",
         "scope": null,
-        "refresh_token":
-          "ZTFkZWUwMGU0YTk0ZDc5NjkwMmRjOTljYjRhZWFiYWExYzc4ZTgyNjlkNDQ5YzE0MzVhMGMxNmI0ZDk0YjAwYg"
+        "refresh_token": "ZTFkZWUwMGU0YTk0ZDc5NjkwMmRjOTljYjRhZWFiYWExYzc4ZTgyNjlkNDQ5YzE0MzVhMGMxNmI0ZDk0YjAwYg"
       }
+    },
+    {
+      "businessName": "test de razon social",
+      "cellphone": "json",
+      "address": "esta es la direccion de la persona",
+      "economicActivity": 4,
+      "apiId": "ndocs",
+      "id": 2
     }
   ],
   "oauth": {
-    "access_token":
-      "YTI0NjBhMjIxOGU5MmFiZmUxMjdmYTZlNWJkYjI0ZDkwODRjNTI4YWE5Y2FmMTdmZjEwN2E4MGRlNTkyNGFhNA",
+    "access_token": "YTI0NjBhMjIxOGU5MmFiZmUxMjdmYTZlNWJkYjI0ZDkwODRjNTI4YWE5Y2FmMTdmZjEwN2E4MGRlNTkyNGFhNA",
     "expires_in": 3600,
     "token_type": "Bearer",
     "scope": null,
-    "refresh_token":
-      "ZTFkZWUwMGU0YTk0ZDc5NjkwMmRjOTljYjRhZWFiYWExYzc4ZTgyNjlkNDQ5YzE0MzVhMGMxNmI0ZDk0YjAwYg"
-  }
+    "refresh_token": "ZTFkZWUwMGU0YTk0ZDc5NjkwMmRjOTljYjRhZWFiYWExYzc4ZTgyNjlkNDQ5YzE0MzVhMGMxNmI0ZDk0YjAwYg"
+  },
+  "activity": [
+    {
+      "id": 1,
+      "label": "Servicios Médicos"
+    },
+    {
+      "id": 2,
+      "label": "Servicios Profesionales"
+    },
+    {
+      "id": 3,
+      "label": "Experto en Juegos"
+    },
+    {
+      "id": 4,
+      "label": "Game Developer"
+    },
+    {
+      "id": 5,
+      "label": "Game Designer"
+    },
+    {
+      "id": 6,
+      "label": "Game Developer"
+    },
+    {
+      "id": 7,
+      "label": "Game Developer"
+    },
+    {
+      "id": 8,
+      "label": "Game Developer"
+    },
+    {
+      "id": 9,
+      "label": "Game Developer"
+    },
+    {
+      "id": 10,
+      "label": "Game Developer"
+    },
+    {
+      "id": 11,
+      "label": "Game Developer"
+    },
+    {
+      "id": 12,
+      "label": "Game Developer"
+    },
+    {
+      "id": 13,
+      "label": "Game Developer"
+    }
+  ]
 }

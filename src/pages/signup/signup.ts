@@ -46,7 +46,7 @@ export class SignupPage {
         resp => {
           this.navCtrl.setRoot(
             DataVerificationPage,
-            {},
+            { ruc: resp.ruc },
             {
               animate: true,
               direction: 'forward'
@@ -64,7 +64,6 @@ export class SignupPage {
         },
         () => {
           loading.dismiss();
-          console.log('onCompleted');
         }
       );
     } else {

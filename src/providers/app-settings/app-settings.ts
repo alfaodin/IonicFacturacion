@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Api } from '../api/api';
 
 /*
   Generated class for the AppSettingsProvider provider.
@@ -9,9 +9,9 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class AppSettingsProvider {
+  constructor(private api: Api) {}
 
-  constructor(public http: HttpClient) {
-    console.log('Hello AppSettingsProvider Provider');
+  getEconomicActivities() {
+    return this.api.get('settings/activity');
   }
-
 }
