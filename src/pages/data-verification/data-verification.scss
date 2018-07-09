@@ -10,7 +10,6 @@ page-data-verification {
     .container {
         width: 90%;
         margin: 1.5rem auto;
-
         .step-container {
             text-align: center;
             .step {
@@ -40,9 +39,11 @@ page-data-verification {
                 color: map-get($colors, blueGrey);
             }
             .item-select .label-md,
+            .item-input .label-md,
             .item-input-has-focus .label-md[floating],
             .input-has-focus .label-md[floating] {
                 color: map-get($colors, dark);
+                font-weight: 200;
             }
             ion-icon {
                 color: map-get($colors, dark);
@@ -64,4 +65,5 @@ page-data-verification {
             }
         }
     }
+    
 }

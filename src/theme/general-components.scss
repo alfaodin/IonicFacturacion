@@ -62,13 +62,13 @@ page-login{
         border-bottom-color: map-get($colors, light);
         box-shadow: unset;
     }
-    .icon-error-message {
-        margin: 0 !important;
-        font-size: 22px !important;
-        align-self: flex-end !important;
-    }
 }
 
+.icon-error-message {
+    margin: 0 !important;
+    font-size: 22px !important;
+    align-self: flex-end !important;
+}
 /*---------------------- TOAST -----------------------------*/
 .notification.error {
     .toast-wrapper {

@@ -1,8 +1,7 @@
 import 'rxjs/add/operator/toPromise';
 import { tap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from "rxjs";
-
+import { BehaviorSubject, Observable } from 'rxjs';
 
 import { Api } from '../api/api';
 
@@ -29,11 +28,11 @@ import { Api } from '../api/api';
 export class User {
   _user: any;
   /**
-* Fuente de datos para loggedIn$
-*/
+   * Fuente de datos para loggedIn$
+   */
   private loggedInSource = new BehaviorSubject<boolean>(false);
 
-  constructor(public api: Api) { }
+  constructor(public api: Api) {}
 
   /**
    * Send a POST request to our login endpoint with the data
@@ -44,10 +43,10 @@ export class User {
   }
 
   /**
-  * Permite autenticarse al usuario
-  * @param {LoginParams} loginParams  Datos de autenticación
-  * @return {Observable}  Respuesta api
-  */
+   * Permite autenticarse al usuario
+   * @param {LoginParams} loginParams  Datos de autenticación
+   * @return {Observable}  Respuesta api
+   */
   // login(loginParams: any) {
   //   let url: string = environment.apiPath + environment.authentication.oauth.tokenEndpoint;
   //   let authorizationDetail: object = {
@@ -73,10 +72,14 @@ export class User {
     return this.api.post('user/signup', accountInfo);
   }
 
+  getUserDataForRegistration(ruc): Observable<any> {
+    return this.api.post('user/registration-data', { ruc: ruc });
+  }
+
   /**
-    * Cierra la sesión del usuario
-    * @return {void}
-    */
+   * Cierra la sesión del usuario
+   * @return {void}
+   */
   logout(): void {
     localStorage.removeItem('token');
     this.loggedInSource.next(false);

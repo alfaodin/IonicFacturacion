@@ -63,13 +63,40 @@
       "email": "fgdgd",
       "password": "dfgdgd",
       "id": 7
+    },
+    {
+      "ruc": "fghfg",
+      "email": "fghfg",
+      "password": "fghf",
+      "id": 8
+    }
+  ],
+  "registration": [
+    {
+      "id": 1,
+      "ruc": "asdas",
+      "businessName": "test de razon social",
+      "cellphone": "json",
+      "address": "esta es la direccion de la persona",
+      "economicActivity": 1,
+      "oauth": {
+        "access_token":
+          "YTI0NjBhMjIxOGU5MmFiZmUxMjdmYTZlNWJkYjI0ZDkwODRjNTI4YWE5Y2FmMTdmZjEwN2E4MGRlNTkyNGFhNA",
+        "expires_in": 3600,
+        "token_type": "Bearer",
+        "scope": null,
+        "refresh_token":
+          "ZTFkZWUwMGU0YTk0ZDc5NjkwMmRjOTljYjRhZWFiYWExYzc4ZTgyNjlkNDQ5YzE0MzVhMGMxNmI0ZDk0YjAwYg"
+      }
     }
   ],
   "oauth": {
-    "access_token": "YTI0NjBhMjIxOGU5MmFiZmUxMjdmYTZlNWJkYjI0ZDkwODRjNTI4YWE5Y2FmMTdmZjEwN2E4MGRlNTkyNGFhNA",
+    "access_token":
+      "YTI0NjBhMjIxOGU5MmFiZmUxMjdmYTZlNWJkYjI0ZDkwODRjNTI4YWE5Y2FmMTdmZjEwN2E4MGRlNTkyNGFhNA",
     "expires_in": 3600,
     "token_type": "Bearer",
     "scope": null,
-    "refresh_token": "ZTFkZWUwMGU0YTk0ZDc5NjkwMmRjOTljYjRhZWFiYWExYzc4ZTgyNjlkNDQ5YzE0MzVhMGMxNmI0ZDk0YjAwYg"
+    "refresh_token":
+      "ZTFkZWUwMGU0YTk0ZDc5NjkwMmRjOTljYjRhZWFiYWExYzc4ZTgyNjlkNDQ5YzE0MzVhMGMxNmI0ZDk0YjAwYg"
   }
 }
