@@ -35,7 +35,7 @@
       "id": 2
     }
   ],
-  "registration": [
+  "user-data": [
     {
       "id": 1,
       "ruc": "1712649951001",
@@ -50,14 +50,6 @@
         "scope": null,
         "refresh_token": "ZTFkZWUwMGU0YTk0ZDc5NjkwMmRjOTljYjRhZWFiYWExYzc4ZTgyNjlkNDQ5YzE0MzVhMGMxNmI0ZDk0YjAwYg"
       }
-    },
-    {
-      "businessName": "test de razon social",
-      "cellphone": "json",
-      "address": "esta es la direccion de la persona",
-      "economicActivity": 4,
-      "apiId": "ndocs",
-      "id": 2
     }
   ],
   "oauth": {

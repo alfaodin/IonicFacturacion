@@ -74,12 +74,18 @@ export class DataVerificationPage {
   }
 
   verifyData() {
+    this.loadingControl = this.loadingCtrl.create({
+      spinner: 'bubbles',
+      content: 'Please wait...'
+    });
     this.loadingControl.present();
+    this.slides.lockSwipes(false);
     this.userProvider
       .saveUserDataForRegistration(this.newUserForm.value)
       .subscribe(
         resp => {
           this.slides.slideNext();
+          this.slides.lockSwipes(true);
         },
         null,
         () => {

@@ -73,11 +73,11 @@ export class User {
   }
 
   getUserDataForRegistration(ruc): Observable<any> {
-    return this.api.get(`registration?ruc=${ruc}`);
+    return this.api.get(`user/registration?ruc=${ruc}`);
   }
 
   saveUserDataForRegistration(userRegistration): Observable<any> {
-    return this.api.post(`registration`, userRegistration);
+    return this.api.post(`user/registration`, userRegistration);
   }
 
   /**
