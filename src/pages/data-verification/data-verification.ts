@@ -25,7 +25,9 @@ export class DataVerificationPage {
 
   userRuc: string;
   steps: Array<any>;
+  selectedFile: any;
   headerTitle: string;
+  fileForm: FormGroup;
   newUserForm: FormGroup;
   loadingControl: Loading;
   headerTitles: Array<string>;
@@ -58,6 +60,10 @@ export class DataVerificationPage {
       cellphone: ['', Validators.required],
       address: ['', Validators.required],
       economicActivity: ['', Validators.required]
+    });
+
+    this.fileForm = this.formBuilder.group({
+      backgroundImageUrl: ['']
     });
 
     this.loadingControl = this.loadingCtrl.create({
@@ -133,5 +139,19 @@ export class DataVerificationPage {
       const step = this.steps[index];
       step.selected = index <= currentStep;
     }
+  }
+
+  removeSelectedImage() {
+    this.selectedFile = undefined;
+  }
+
+  changeImageListener($event): void {
+    const file = $event.target.files[0];
+
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+      this.selectedFile = reader.result;
+    };
   }
 }

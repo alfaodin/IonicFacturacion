@@ -69,9 +69,15 @@
           </ion-col>
         </ion-row>
 
-        <ion-row align-items-center class="mt-3 input-image">
-          <ion-col col-12 align-self-center>
-            <img src="../../assets/img/data-registration/camera.png"/>
+        <ion-row class="mt-3 input-image">
+          <ion-col col-12>
+            <button class="remove-image-button" *ngIf="selectedFile" ion-button icon-start icon-only [clear]="true" (click)="removeSelectedImage()">
+              <ion-icon name="ios-trash"></ion-icon>
+            </button>
+            <img class="image-indicator" *ngIf="!selectedFile" src="../../assets/img/data-registration/camera.png" />
+            <img class="image-preview" *ngIf="selectedFile" [src]="selectedFile" style="max-width:200px">
+            <ion-input id="file-input" type="file" accept="image/*" (change)="changeImageListener($event)">
+            </ion-input>
           </ion-col>
         </ion-row>
 
