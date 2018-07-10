@@ -1,69 +1,111 @@
 page-data-verification {
-    ion-title {
-        margin-top: 0;
-        text-align: center;
-        .toolbar-title {
-            font-size: 1.9rem;
-            color: map-get($colors, dark);
-        }
+  ion-title {
+    margin-top: 0;
+    text-align: center;
+    .toolbar-title {
+      font-size: 1.9rem;
+      color: map-get($colors, dark);
     }
-    .container {
-        width: 90%;
-        margin: 7.5rem auto;
-        .step-container {
-            text-align: center;
-            .step {
-                font-size: 1.6rem;
-                color: map-get($colors, blueGrey);
-                margin-left: -.5rem;
-                padding: 14px 23px;
-                font-weight: 200;
-                border-bottom: 2px solid map-get($colors, blueGrey);
-                &.selected {
-                    font-weight: 400;
-                    color: map-get($colors, primary);
-                    border-bottom-color: map-get($colors, primary);
-                }
-            }
+  }
+  .container {
+    width: 90%;
+    margin: 7.5rem auto;
+    .step-container {
+      text-align: center;
+      position: relative;
+      .back-step-button {
+        height: 1.6rem;
+        font-weight: 200;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        ion-icon {
+          color: map-get($colors, blueGrey);
         }
-        .slide-container {
-            margin-top: 3rem;
-            .item-input .label-md {
-                color: map-get($colors, dark);
-            }
-            .item-ios,
-            .item-md {
-                padding: 0;
-                margin: 1.5rem 0;
-                background-color: transparent;
-                color: map-get($colors, blueGrey);
-            }
-            .item-select .label-md,
-            .item-input .label-md,
-            .item-input-has-focus .label-md[floating],
-            .input-has-focus .label-md[floating] {
-                color: map-get($colors, dark);
-                font-weight: 200;
-            }
-            ion-icon {
-                color: map-get($colors, dark);
-            }
-            .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
-            .item-md.item-input.item-input-has-focus .item-inner,
-            .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
-            .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
-                border-bottom-color: map-get($colors, blueGrey);
-                box-shadow: unset;
-            }
-            .button-container {
-                margin-top: 5rem;
-                .sign-up-btn {
-                    padding: 2.4rem 5.3rem;
-                    font-size: 1.6rem;
-                    font-weight: 200;
-                }
-            }
+      }
+      .step {
+        font-size: 1.6rem;
+        color: map-get($colors, blueGrey);
+        margin-left: -0.5rem;
+        padding: 14px 23px;
+        font-weight: 200;
+        border-bottom: 2px solid map-get($colors, blueGrey);
+        &.selected {
+          font-weight: 400;
+          color: map-get($colors, primary);
+          border-bottom-color: map-get($colors, primary);
         }
+      }
     }
-    
+    .slide-container {
+      margin-top: 3rem;
+      .item-input .label-md {
+        color: map-get($colors, dark);
+      }
+      .item-ios,
+      .item-md {
+        padding: 0;
+        margin: 1.5rem 0;
+        background-color: transparent;
+        color: map-get($colors, blueGrey);
+      }
+      .item-select .label-md,
+      .item-input .label-md,
+      .item-input-has-focus .label-md[floating],
+      .input-has-focus .label-md[floating] {
+        color: map-get($colors, dark);
+        font-weight: 200;
+      }
+      ion-icon {
+        color: map-get($colors, dark);
+      }
+      .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus)
+        .item-inner,
+      .item-md.item-input.item-input-has-focus .item-inner,
+      .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus)
+        .item-inner,
+      .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus)
+        .item-inner {
+        border-bottom-color: map-get($colors, blueGrey);
+        box-shadow: unset;
+      }
+      .button-container {
+        margin-top: 5rem;
+        .sign-up-btn {
+          padding: 2.4rem 5.3rem;
+          font-size: 1.6rem;
+          font-weight: 200;
+        }
+      }
+    }
+    .plus-indicator {
+      border-radius: 50%;
+      padding: 3px;
+      background-color: map-get($colors, blueGrey);
+      ion-icon {
+        font-size: 1.8em;
+        margin: 0;
+        padding: 0 0.5rem;
+        color: map-get($colors, light);
+      }
+    }
+    .title-add-image {
+      font-size: 1.6rem;
+      font-weight: 200;
+    }
+    .small-image-size {
+      font-size: 1.3rem;
+      font-weight: 200;
+      color: map-get($colors, blueGrey);
+    }
+    .input-image {
+      background-color: map-get($colors, blueGreyLight);
+      border-radius: 1rem;
+      height: 25rem;
+      img {
+        width: 25%;
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/v2/theming/
-$font-path: "../assets/fonts";
-@import "ionic.globals";
+$font-path: '../assets/fonts';
+@import 'ionic.globals';
 // Shared Variables
 // --------------------------------------------------
 // To customize the look and feel of this app, you can override
@@ -17,14 +17,22 @@ $background-color: #fff;
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
-$colors: ( primary: #2979ff, secondary: #a4b4bc, danger: #FF4600, light: #FFF, dark: #000000, blueGrey: #90a4ae);
-$text-input-highlight-color-valid: #FFF;
-$text-input-highlight-color-invalid: #FF4600;
+$colors: (
+  primary: #2979ff,
+  secondary: #a4b4bc,
+  danger: #ff4600,
+  light: #fff,
+  dark: #000000,
+  blueGrey: #90a4ae,
+  blueGreyLight: #e9edef
+);
+$text-input-highlight-color-valid: #fff;
+$text-input-highlight-color-invalid: #ff4600;
 $text-input-wp-border-width: 1rem;
 $button-round-border-radius: 1.2rem;
-$toolbar-background:#FFF;
+$toolbar-background: #fff;
 .item-block {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 // App iOS Variables
@@ -42,57 +50,58 @@ $toolbar-background:#FFF;
 // then be future customized. This import comes last
 // so that the above variables are used and Ionic's
 // default are overridden.
-@import "ionic.theme.default";
-@import "./general-components";
+@import 'ionic.theme.default';
+@import './general-components';
+@import './utilities';
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
 // http://ionicframework.com/docs/v2/ionicons/
-@import "ionic.ionicons";
+@import 'ionic.ionicons';
 // Fonts
 // --------------------------------------------------
-@import "roboto";
-@import "noto-sans";
+@import 'roboto';
+@import 'noto-sans';
 @font-face {
-    font-family: 'ProximaNova';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../assets/fonts/ProximaNovaCond-Regular.otf');
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/ProximaNovaCond-Regular.otf');
 }
 
 @font-face {
-    font-family: 'ProximaNova';
-    font-style: light;
-    font-weight: 200;
-    src: url('../assets/fonts/ProximaNova-Light.otf');
+  font-family: 'ProximaNova';
+  font-style: light;
+  font-weight: 200;
+  src: url('../assets/fonts/ProximaNova-Light.otf');
 }
 
 @font-face {
-    font-family: 'ProximaNova';
-    font-style: semi-bold;
-    font-weight: 600;
-    src: url('../assets/fonts/ProximaNova-Semibold.otf');
+  font-family: 'ProximaNova';
+  font-style: semi-bold;
+  font-weight: 600;
+  src: url('../assets/fonts/ProximaNova-Semibold.otf');
 }
 
 @font-face {
-    font-family: 'ProximaNova';
-    font-style: bold;
-    font-weight: 700;
-    src: url('../assets/fonts/ProximaNova-Bold.otf');
+  font-family: 'ProximaNova';
+  font-style: bold;
+  font-weight: 700;
+  src: url('../assets/fonts/ProximaNova-Bold.otf');
 }
 
 @font-face {
-    font-family: 'ProximaNova';
-    font-style: extra-bold;
-    font-weight: 900;
-    src: url('../assets/fonts/ProximaNova-Extrabold.otf');
+  font-family: 'ProximaNova';
+  font-style: extra-bold;
+  font-weight: 900;
+  src: url('../assets/fonts/ProximaNova-Extrabold.otf');
 }
 
-$font-family-base: "ProximaNova";
-$font-family-wp-base: "ProximaNova";
-$font-family-md-base: "ProximaNova";
-$font-family-ios-base: "ProximaNova";
+$font-family-base: 'ProximaNova';
+$font-family-wp-base: 'ProximaNova';
+$font-family-md-base: 'ProximaNova';
+$font-family-ios-base: 'ProximaNova';
 body {
-    font-family: "ProximaNova";
-    font-weight: 400;
+  font-family: 'ProximaNova';
+  font-weight: 400;
 }

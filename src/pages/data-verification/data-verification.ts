@@ -24,8 +24,12 @@ export class DataVerificationPage {
   @ViewChild(Slides) slides: Slides;
 
   userRuc: string;
-  loadingControl: Loading;
+  steps: Array<any>;
+  headerTitle: string;
   newUserForm: FormGroup;
+  loadingControl: Loading;
+  headerTitles: Array<string>;
+  showBackStepButton: Boolean;
   economicActivities: Array<any>;
 
   constructor(
@@ -35,6 +39,19 @@ export class DataVerificationPage {
     public loadingCtrl: LoadingController,
     public appSettingsProvider: AppSettingsProvider
   ) {
+    //Pasos de la aplicacion
+    this.showBackStepButton = false;
+    this.headerTitles = new Array<string>();
+    this.headerTitles.push('Verifica datos de tu negocio');
+    this.headerTitles.push('Personaliza tus comprobantes');
+    this.headerTitles.push('Firma Electrónica');
+
+    this.headerTitle = this.headerTitles[0];
+    this.steps = new Array<any>();
+    for (let index = 0; index < 3; index++) {
+      this.steps.push({ value: index + 1, selected: index === 0 });
+    }
+
     this.userRuc = this.params.get('ruc');
     this.newUserForm = this.formBuilder.group({
       businessName: ['', Validators.required],
@@ -61,8 +78,6 @@ export class DataVerificationPage {
     ).subscribe(
       (resp: Array<any>) => {
         const [userData, appSettings] = resp;
-
-        console.log(`use ${userData} actividades ${appSettings}`);
         this.economicActivities = appSettings;
         this.newUserForm.patchValue(userData[0]);
       },
@@ -74,23 +89,49 @@ export class DataVerificationPage {
   }
 
   verifyData() {
-    this.loadingControl = this.loadingCtrl.create({
-      spinner: 'bubbles',
-      content: 'Please wait...'
-    });
-    this.loadingControl.present();
+    // this.loadingControl = this.loadingCtrl.create({
+    //   spinner: 'bubbles',
+    //   content: 'Please wait...'
+    // });
+    // this.loadingControl.present();
+    // this.slides.lockSwipes(false);
+    // this.userProvider
+    //   .saveUserDataForRegistration(this.newUserForm.value)
+    //   .subscribe(
+    //     resp => {
+    //       this.slides.slideNext();
+    //       this.slides.lockSwipes(true);
+    //     },
+    //     null,
+    //     () => {
+    //       this.loadingControl.dismiss();
+    //     }
+    //   );
+
     this.slides.lockSwipes(false);
-    this.userProvider
-      .saveUserDataForRegistration(this.newUserForm.value)
-      .subscribe(
-        resp => {
-          this.slides.slideNext();
-          this.slides.lockSwipes(true);
-        },
-        null,
-        () => {
-          this.loadingControl.dismiss();
-        }
-      );
+    this.slides.slideNext();
+    this.changeStep(this.slides.getActiveIndex());
+    this.slides.lockSwipes(true);
+  }
+
+  private backToPreviousSlide() {
+    this.slides.lockSwipes(false);
+    this.slides.slidePrev();
+    this.changeStep(this.slides.getActiveIndex());
+    this.slides.lockSwipes(true);
+  }
+  private changeStep(currentStep: number): void {
+    if (currentStep >= 1) {
+      this.showBackStepButton = true;
+    } else {
+      this.showBackStepButton = false;
+    }
+
+    this.headerTitle = this.headerTitles[currentStep];
+
+    for (let index = 0; index < 3; index++) {
+      const step = this.steps[index];
+      step.selected = index <= currentStep;
+    }
   }
 }

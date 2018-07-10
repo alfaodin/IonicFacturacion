@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Verifica datos de tu negocio</ion-title>
+    <ion-title>{{headerTitle}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -8,9 +8,11 @@
 <div class="container">
   <!-- STEPS -->
   <div class="step-container">
-    <label class="step selected">1</label>
-    <label class="step">2</label>
-    <label class="step">3</label>
+    <button class="back-step-button" ion-button icon-start icon-only [clear]="true" (click)="backToPreviousSlide()" *ngIf="showBackStepButton">
+      <ion-icon name="ios-arrow-back"></ion-icon>
+    </button>
+
+    <label class="step" [ngClass]="{'selected' : step.selected}" *ngFor="let step of steps">{{step.value}}</label>
   </div>
 
   <!-- SLIDES -->
@@ -55,7 +57,30 @@
       </ion-slide>
       <!-- SELECCION DE IMAGEN -->
       <ion-slide>
-        <h1>Slide 2</h1>
+        <ion-row align-items-center>
+          <ion-col col-2>
+            <ion-badge class="plus-indicator">
+              <ion-icon name="ios-add"></ion-icon>
+            </ion-badge>
+          </ion-col>
+          <ion-col col-9 text-left>
+            <label class="d-block title-add-image" color="light">Agrega un logo (opcional)</label>
+            <small class="small-image-size">Tamaño recomendado 500px x 500px</small>
+          </ion-col>
+        </ion-row>
+
+        <ion-row align-items-center class="mt-3 input-image">
+          <ion-col col-12 align-self-center>
+            <img src="../../assets/img/data-registration/camera.png"/>
+          </ion-col>
+        </ion-row>
+
+        <div class="button-container">
+          <button class="sign-up-btn" ion-button color="primary" round (click)="verifyData()">
+            Siguiente
+          </button>
+        </div>
+
       </ion-slide>
       <!-- VERIFICACIÓN DE FIRMA ELECTRÓNICA -->
       <ion-slide>

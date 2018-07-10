@@ -33,6 +33,12 @@
       "email": "sadas",
       "password": "asdad",
       "id": 2
+    },
+    {
+      "ruc": "1712649951001",
+      "email": "asdas",
+      "password": "adasda",
+      "id": 3
     }
   ],
   "user-data": [
@@ -50,6 +56,13 @@
         "scope": null,
         "refresh_token": "ZTFkZWUwMGU0YTk0ZDc5NjkwMmRjOTljYjRhZWFiYWExYzc4ZTgyNjlkNDQ5YzE0MzVhMGMxNmI0ZDk0YjAwYg"
       }
+    },
+    {
+      "businessName": "test de razon social",
+      "cellphone": "json",
+      "address": "esta es la direccion de la persona",
+      "economicActivity": 2,
+      "id": 2
     }
   ],
   "oauth": {
