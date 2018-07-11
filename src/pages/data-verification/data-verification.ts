@@ -4,7 +4,8 @@ import {
   Slides,
   NavParams,
   LoadingController,
-  Loading
+  Loading,
+  NavController
 } from 'ionic-angular';
 import {
   FormGroup,
@@ -13,6 +14,7 @@ import {
 } from '../../../node_modules/@angular/forms';
 import { forkJoin } from '../../../node_modules/rxjs/observable/forkJoin';
 
+import { MainPage } from '../pages';
 import { User, AppSettingsProvider } from '../../providers/providers';
 
 @IonicPage()
@@ -37,6 +39,7 @@ export class DataVerificationPage {
   constructor(
     public userProvider: User,
     public params: NavParams,
+    public navCtrl: NavController,
     public formBuilder: FormBuilder,
     public loadingCtrl: LoadingController,
     public appSettingsProvider: AppSettingsProvider
@@ -153,5 +156,16 @@ export class DataVerificationPage {
     reader.onloadend = () => {
       this.selectedFile = reader.result;
     };
+  }
+
+  showMainScreen() {
+    this.navCtrl.setRoot(
+      MainPage,
+      {},
+      {
+        animate: true,
+        direction: 'forward'
+      }
+    );
   }
 }

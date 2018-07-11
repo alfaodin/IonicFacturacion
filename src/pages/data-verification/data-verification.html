@@ -57,6 +57,7 @@
       </ion-slide>
       <!-- SELECCION DE IMAGEN -->
       <ion-slide>
+        <!-- Header -->
         <ion-row align-items-center>
           <ion-col col-2>
             <ion-badge class="plus-indicator">
@@ -69,6 +70,7 @@
           </ion-col>
         </ion-row>
 
+        <!-- Input image -->
         <ion-row class="mt-3 input-image">
           <ion-col col-12>
             <button class="remove-image-button" *ngIf="selectedFile" ion-button icon-start icon-only [clear]="true" (click)="removeSelectedImage()">
@@ -90,7 +92,51 @@
       </ion-slide>
       <!-- VERIFICACIÓN DE FIRMA ELECTRÓNICA -->
       <ion-slide>
-        <h1>Slide 3</h1>
+        <ion-row justify-content-center>
+          <ion-col col-10 text-center>
+            <label color="dark">Necesitas una firma electrónica para autorizar la emisión de comprobantes</label>
+          </ion-col>
+        </ion-row>
+
+        <div class="background-container mt-3">
+          <ion-row>
+            <ion-col col-8 text-left>
+              <h4>Ya tengo firma</h4>
+              <small>Cárgala desde la versión escritorio</small>
+            </ion-col>
+            <ion-col col-4 text-center>
+              <button ion-button round outline>Aprender cómo
+              </button>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-8 text-left>
+              <h4>Obtener mi firma en línea</h4>
+              <small>Listo en X días. Toma 6 pasos obtenerla Costo de $20</small>
+            </ion-col>
+            <ion-col col-4 text-center>
+              <button ion-button round outline>Aprender cómo
+              </button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-8 text-left>
+              <h4>Tramitar en registro civil</h4>
+              <small>Listo en X días Costo de $20</small>
+            </ion-col>
+            <ion-col col-4 text-center>
+              <button ion-button round outline>Aprender cómo
+              </button>
+            </ion-col>
+          </ion-row>
+
+          <a class="blue-border-link mt-4" (click)="showMainScreen()">
+            Cargar una firma después
+          </a>
+        </div>
+
+
       </ion-slide>
     </ion-slides>
   </div>
