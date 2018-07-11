@@ -1,42 +1,66 @@
-<ion-header>
+<ion-content style="margin-top: 80px;">
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col>
+        <ion-toolbar no-border-top *ngIf="demo != 'Title'">
+          <ion-searchbar></ion-searchbar>
+        </ion-toolbar>
+      </ion-col>
+      <ion-col col-auto>
+        <button ion-button icon-only (click)="buttonClick(button2)">
+          <ion-icon name="search"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="buttonClick(button2)">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <ion-navbar>
-    <ion-title>{{ 'CARDS_TITLE' | translate }}</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content>
 
   <ion-card *ngFor="let item of cardItems">
+    <ion-row>
+      <ion-col col-auto>
+        <p>001143582750</p>
+      </ion-col>
+      <ion-col col-auto>
+        <p>28/04/18</p>
+      </ion-col>
+      <ion-col col-auto>
+        <p>$ 50,00</p>
+      </ion-col>
+      <ion-col col-auto>
+        <button ion-button color="primary" clear small icon-start>
+          <ion-icon name='thumbs-up'></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
 
-    <ion-item>
-      <ion-avatar item-start>
-        <img [src]="item.user.avatar">
-      </ion-avatar>
-      <h2>{{item.user.name}}</h2>
-      <p>{{item.date}}</p>
-    </ion-item>
+    <ion-row>
+      <ion-col col-auto>
+        <p>Francisco Alvear</p>
+      </ion-col>
+      <ion-col>
+        <p>28/04/18</p>
+      </ion-col>
+      <ion-col col-auto>
+        <p>$ 50,00</p>
+      </ion-col>
+    </ion-row>
 
-    <img [src]="item.image">
-
-    <ion-card-content>
-      <p>{{item.content}}</p>
-    </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button color="primary" clear small icon-start>
-            <ion-icon name='thumbs-up'></ion-icon>
-            12 Likes
-          </button>
+          <ion-icon name='thumbs-up'></ion-icon>
+          12 Likes
+        </button>
       </ion-col>
       <ion-col>
         <button ion-button color="primary" clear small icon-start>
-            <ion-icon name='text'></ion-icon>
-            4 Comments
-          </button>
+          <ion-icon name='text'></ion-icon>
+          4 Comments
+        </button>
       </ion-col>
       <ion-col center text-center>
         <ion-note>

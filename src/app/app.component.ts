@@ -2,33 +2,17 @@ import { Component, ViewChild } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateService } from '@ngx-translate/core';
-import { Config, Nav, Platform } from 'ionic-angular';
+import { Config, Nav, Platform, ViewController } from 'ionic-angular';
 
 import { FirstRunPage } from '../pages/pages';
 import { Settings } from '../providers/providers';
 
 @Component({
-  template: `<ion-menu [content]="content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Pages</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          {{p.title}}
-        </button>
-      </ion-list>
-    </ion-content>
-
-  </ion-menu>
-  <ion-nav #content [root]="rootPage"></ion-nav>`
+  templateUrl: 'app.html'
 })
 export class MyApp {
   rootPage = FirstRunPage;
-
+  showHeader = false;
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
@@ -52,6 +36,15 @@ export class MyApp {
       this.statusBar.styleDefault();
       // this.splashScreen.show()
       // setTimeout(() => { this.splashScreen.hide(); }, 8000);
+
+      this.nav.viewDidEnter.subscribe((data: ViewController) => {
+        if(data.name === 'SignupPage' || data.name === 'LoginPage' || data.name === 'DataVerificationPage'){
+          this.showHeader = false;
+        }else{
+          this.showHeader = true;
+        }
+        
+      });
     });
     this.initTranslate();
   }

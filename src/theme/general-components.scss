@@ -96,3 +96,18 @@ page-login{
         transform: translateY(-50%);
     }
 }
+
+
+.button[icon-only] {
+    background-color: transparent;
+    padding: 0;
+    min-width: .9em;
+    box-shadow: unset;
+    ion-icon {
+        padding: 0;
+        font-size: 1.8em;
+        line-height: .67;
+        margin-right: 0;
+        pointer-events: none;
+    }
+}
