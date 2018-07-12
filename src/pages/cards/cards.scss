@@ -1,5 +1,5 @@
 page-cards {
-    .bill-container{
+    .bill-container {
         background-color: map-get($colors, blueGreyLight);
         border-radius: 1rem;
         padding: 1rem;
@@ -14,17 +14,20 @@ page-cards {
         font-weight: 800;
         background-color: transparent;
     }
-
-    .bill-summary-down{
+    .bill-summary-down {
         color: map-get($colors, blueGrey);
     }
-
-    .bill-summary-down-color{
+    .bill-summary-down-color {
         background-color: map-get($colors, danger);
         border-radius: 2rem;
         text-align: center;
         font-weight: 400;
         font-size: 1.6rem;
         color: map-get($colors, light);
+    }
+    .button[icon-only] {
+        padding: 5px;
+        font-size: 28px;
+        color: map-get($colors, blueGrey);
     }
 }
