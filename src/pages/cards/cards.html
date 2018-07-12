@@ -18,54 +18,33 @@
   </ion-grid>
 
 
-  <ion-card *ngFor="let item of cardItems">
-    <ion-row>
-      <ion-col col-auto>
-        <p>001143582750</p>
+  <ion-card class="bill-container" *ngFor="let item of cardItems">
+    <ion-row justify-content-center>
+      <ion-col col-5 class="font-extra">
+        001143582750
+      </ion-col>
+      <ion-col col-3 class="font-extra">
+        28/04/18
+      </ion-col>
+      <ion-col col-3 class="font-extra">
+        $ 50,00
       </ion-col>
       <ion-col col-auto>
-        <p>28/04/18</p>
-      </ion-col>
-      <ion-col col-auto>
-        <p>$ 50,00</p>
-      </ion-col>
-      <ion-col col-auto>
-        <button ion-button color="primary" clear small icon-start>
-          <ion-icon name='thumbs-up'></ion-icon>
+        <button class="dots-button" clear>
+          ...
         </button>
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col col-auto>
-        <p>Francisco Alvear</p>
+    <ion-row justify-content-center>
+      <ion-col col-5 class="font-regular bill-summary-down" color="primary">
+        Francisco Alvear
       </ion-col>
-      <ion-col>
-        <p>28/04/18</p>
+      <ion-col col-3 class="font-regular bill-summary-down">
+        Declarada		   			
       </ion-col>
-      <ion-col col-auto>
-        <p>$ 50,00</p>
-      </ion-col>
-    </ion-row>
-
-
-    <ion-row>
-      <ion-col>
-        <button ion-button color="primary" clear small icon-start>
-          <ion-icon name='thumbs-up'></ion-icon>
-          12 Likes
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button color="primary" clear small icon-start>
-          <ion-icon name='text'></ion-icon>
-          4 Comments
-        </button>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          11h ago
-        </ion-note>
+      <ion-col col-4 class="font-regular bill-summary-down-color">
+        Firmada
       </ion-col>
     </ion-row>
   </ion-card>
