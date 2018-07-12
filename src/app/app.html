@@ -15,20 +15,20 @@
 
 </ion-menu>
 
-<ion-header *ngIf="showHeader">
+<ion-header class="general-header-container" *ngIf="showHeader">
 
   <ion-navbar>
     <button ion-button icon-only menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <ion-icon name="menu" color="blueyGrey"></ion-icon>
     </button>
 
     <ion-title>
-      Page Title
+      <ion-icon name="star"></ion-icon>Ndocs
     </ion-title>
 
     <ion-buttons end>
-      <button ion-button icon-only (click)="openModal()">
-        <ion-icon name="options"></ion-icon>
+      <button ion-button icon-only>
+        <ion-icon name="ios-notifications-outline"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>

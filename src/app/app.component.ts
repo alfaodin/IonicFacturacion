@@ -38,7 +38,7 @@ export class MyApp {
       // setTimeout(() => { this.splashScreen.hide(); }, 8000);
 
       this.nav.viewDidEnter.subscribe((data: ViewController) => {
-        if(data.name === 'SignupPage' || data.name === 'LoginPage' || data.name === 'DataVerificationPage'){
+        if(data.name === 'TutorialPage' || data.name === 'SignupPage' || data.name === 'LoginPage' || data.name === 'DataVerificationPage'){
           this.showHeader = false;
         }else{
           this.showHeader = true;
