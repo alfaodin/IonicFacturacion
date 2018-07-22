@@ -45,6 +45,12 @@
       "email": "jhjhgh",
       "password": ",hkjnjkjk",
       "id": 4
+    },
+    {
+      "ruc": "1712649951001",
+      "email": "ftghf",
+      "password": "fghf",
+      "id": 5
     }
   ],
   "user-data": [
@@ -130,6 +136,88 @@
     {
       "id": 13,
       "label": "Game Developer"
+    }
+  ],
+  "bills": [
+    {
+      "id": 1,
+      "userId": 1,
+      "codeBill": "001143582750",
+      "date": "28/04/18",
+      "value": 50,
+      "customerName": "Francisco Alvear",
+      "status": 0,
+      "deliveryStatus":2
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "codeBill": "001143582750",
+      "date": "28/04/18",
+      "value": 50,
+      "customerName": "Francisco Alvear",
+      "status": 0,
+      "deliveryStatus":2
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "codeBill": "001143582750",
+      "date": "28/04/18",
+      "value": 50,
+      "customerName": "Francisco Alvear",
+      "status": 0,
+      "deliveryStatus":2
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "codeBill": "001143582750",
+      "date": "28/04/18",
+      "value": 50,
+      "customerName": "Francisco Alvear",
+      "status": 0,
+      "deliveryStatus":2
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "codeBill": "001143582750",
+      "date": "28/04/18",
+      "value": 50,
+      "customerName": "Francisco Alvear",
+      "status": 0,
+      "deliveryStatus":2
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "codeBill": "001143582750",
+      "date": "28/04/18",
+      "value": 50,
+      "customerName": "Francisco Alvear",
+      "status": 0,
+      "deliveryStatus":2
+    },
+    {
+      "id": 7,
+      "userId": 1,
+      "codeBill": "001143582750",
+      "date": "28/04/18",
+      "value": 50,
+      "customerName": "Francisco Alvear",
+      "status": 0,
+      "deliveryStatus":2
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "codeBill": "001143582750",
+      "date": "28/04/18",
+      "value": 50,
+      "customerName": "Francisco Alvear",
+      "status": 0,
+      "deliveryStatus":2
     }
   ]
 }

@@ -12,7 +12,7 @@
         "ionic:serve": "ionic-app-scripts serve | json-server --watch mocks/db.json --routes mocks/routes.json --delay 1000"
     },
     "config": {
-        "ionic_copy":"./config/copy.config.js"
+        "ionic_copy": "./config/copy.config.js"
     },
     "dependencies": {
         "@angular/animations": "5.2.9",

@@ -5,7 +5,7 @@
   "/api/ndocs/user/login": "/user",
   "/api/ndocs/user/registration": "/user-data/",  
   "/api/ndocs/settings/activity": "/activity",  
-  "/api/ndocs/user/registration\\?ruc=:ruc": "/user-data?ruc=:ruc"
-  
+  "/api/ndocs/user/registration\\?ruc=:ruc": "/user-data?ruc=:ruc",
+  "/api/ndocs/bills/:userId": "/bills?userId=:userId"
   
 }
