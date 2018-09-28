@@ -17,35 +17,49 @@
     </ion-row>
   </ion-grid>
 
+  <ion-content class="outer-content">
+    <ion-list>
+      <ion-scroll style="width: 100%; height: 80vh" scrollY="true">
+        <ion-item *ngFor="let item of bills">
+          <!-- <ion-card class="bill-container">
+          <ion-row justify-content-center>
+            <ion-col col-5 class="font-extra">
+              {{item.codeBill}}
+            </ion-col>
+            <ion-col col-3 class="font-extra">
+              {{item.date}}
+            </ion-col>
+            <ion-col col-3 class="font-extra">
+              {{item.value | currency}}
+            </ion-col>
+            <ion-col col-auto m-0 p-0>
+              <button class="dots-button" clear>
+                <i class="fa fa-ellipsis-h"></i>
+              </button>
+            </ion-col>
+          </ion-row>
 
-  <ion-card class="bill-container" *ngFor="let item of bills">
-    <ion-row justify-content-center>
-      <ion-col col-5 class="font-extra">
-        {{item.codeBill}}
-      </ion-col>
-      <ion-col col-3 class="font-extra">
-        {{item.date}}
-      </ion-col>
-      <ion-col col-3 class="font-extra">
-        {{item.value | currency}}
-      </ion-col>
-      <ion-col col-auto m-0 p-0>
-        <button class="dots-button" clear>
-          <i class="fa fa-ellipsis-h"></i>
-        </button>
-      </ion-col>
-    </ion-row>
+          <ion-row justify-content-center>
+            <ion-col col-5 class="font-regular bill-summary-down" color="primary">
+              {{item.customerName}}
+            </ion-col>
+            <ion-col col-3 class="font-regular bill-summary-down">
+              {{item.status}}
+            </ion-col>
+            <ion-col col-4 class="font-regular bill-summary-down-color">
+              {{item.deliveryStatus}}
+            </ion-col>
+          </ion-row>
+        </ion-card> -->
+          <ion-card class="bill-container" approxItemHeight="200px">
+            <p>test</p>
+          </ion-card>
+        </ion-item>
+      </ion-scroll>
+    </ion-list>
+  </ion-content>
 
-    <ion-row justify-content-center>
-      <ion-col col-5 class="font-regular bill-summary-down" color="primary">
-        {{item.customerName}}
-      </ion-col>
-      <ion-col col-3 class="font-regular bill-summary-down">
-        {{item.status}}
-      </ion-col>
-      <ion-col col-4 class="font-regular bill-summary-down-color">
-        {{item.deliveryStatus}}
-      </ion-col>
-    </ion-row>
-  </ion-card>
+  <ion-fab bottom right>
+    <button ion-fab>Share</button>
+  </ion-fab>
 </ion-content>
